@@ -3,7 +3,7 @@
     "name": "meteoro-do-mestrao",
     "slug": "meteoro-do-mestrao",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "auto",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {

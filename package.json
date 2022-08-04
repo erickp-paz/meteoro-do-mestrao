@@ -7,6 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "android:cache": "expo start --android -c",
+    "ios:cache": "expo start --ios -c",
+    "web:cache": "expo start --web -c",
     "eject": "expo eject"
   },
   "dependencies": {
