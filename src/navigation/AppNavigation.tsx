@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Ionicons } from '@expo/vector-icons'
+import { TextInput, View } from 'react-native'
 
 import HomeScreen from '../../src/screens/HomeScreen'
 import DiceRollScreen from '../../src/screens/DiceRollScreen'
@@ -22,7 +23,8 @@ const AppNavigation = () => {
           name="MainTabs"
           component={MainTabs}
           options={{
-            title: 'Meteoro do Mestrão'
+            headerTitle: 'Meteoro do Mestrão',
+            headerRight: SearchBar
           }}
         />
       </Drawer.Navigator>
@@ -60,6 +62,32 @@ const MainTabs = () => {
       <Tab.Screen name="Ficha" component={CharacterSheetScreen} />
       <Tab.Screen name="Criar" component={CharacterCreationScreen} />
     </Tab.Navigator>
+  )
+}
+
+const SearchBar = () => {
+  return (
+    <View
+      style={{
+        marginRight: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 5
+      }}
+    >
+      <Ionicons name="search" size={20} />
+      <TextInput
+        style={{
+          borderWidth: 0.5,
+          borderColor: 'gray',
+          borderRadius: 5,
+          width: '60%',
+          padding: 5
+        }}
+        placeholder="Buscar"
+      />
+    </View>
   )
 }
 
