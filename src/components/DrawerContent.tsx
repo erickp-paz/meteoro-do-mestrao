@@ -1,21 +1,24 @@
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 import { View, Text, TouchableOpacity } from 'react-native'
 
 const DrawerContent = () => {
+  const navigation = useNavigation()
+
   const navigateToProfile = () => {
-    // Navegar para a página de edição de perfil
+    navigation.navigate('UserProfile')
   }
 
   const navigateToRpgSystems = () => {
-    // Navegar para a página de Sistemas de RPG
+    navigation.navigate('RpgSystems')
   }
 
   const navigateToBestiary = () => {
-    // Navegar para a página de Bestiário
+    navigation.navigate('Bestiary')
   }
 
   const navigateToSettings = () => {
-    // Navegar para a página de configurações
+    navigation.navigate('Settings')
   }
 
   return (
