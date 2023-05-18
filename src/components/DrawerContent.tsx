@@ -63,7 +63,11 @@ const styles = StyleSheet.create({
   topItem: {
     alignSelf: 'flex-start',
     paddingTop: 15,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    padding: 10,
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5
   },
   topItemText: {
     fontSize: 20
@@ -74,7 +78,11 @@ const styles = StyleSheet.create({
   },
   middleItem: {
     marginBottom: 15,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    padding: 10,
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5
   },
   middleItemText: {
     fontSize: 18,
@@ -84,7 +92,11 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     marginTop: 'auto',
     marginBottom: 15,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    padding: 10,
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5
   },
   bottomItemText: {
     fontSize: 20
