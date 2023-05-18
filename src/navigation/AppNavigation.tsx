@@ -1,5 +1,4 @@
 import React from 'react'
-import { Ionicons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
@@ -21,15 +20,8 @@ const AppNavigation = () => {
         <Drawer.Screen
           name="MainTabs"
           component={MainTabs}
-          options={{ title: 'Home' }}
-        />
-        <Drawer.Screen
-          name="Character"
-          component={CharacterCreationScreen}
           options={{
-            drawerIcon: ({ color, size }) => (
-              <Ionicons name="person-add" color={color} size={size} />
-            )
+            title: 'Meteoro do Mestrão'
           }}
         />
       </Drawer.Navigator>
