@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Ionicons } from '@expo/vector-icons'
-import { TextInput, View } from 'react-native'
+import { Image, StyleSheet, TextInput, View } from 'react-native'
 
 import HomeScreen from '../../src/screens/HomeScreen'
 import DiceRollScreen from '../../src/screens/DiceRollScreen'
@@ -23,7 +23,7 @@ const AppNavigation = () => {
           name="MainTabs"
           component={MainTabs}
           options={{
-            headerTitle: 'Meteoro do Mestrão',
+            headerTitle: LogoTitle,
             headerRight: SearchBar
           }}
         />
@@ -65,6 +65,16 @@ const MainTabs = () => {
   )
 }
 
+const LogoTitle = () => {
+  return (
+    <Image
+      source={require('../assets/logo.jpg')}
+      style={styles.logo}
+      resizeMode="contain"
+    />
+  )
+}
+
 const SearchBar = () => {
   return (
     <View
@@ -90,5 +100,12 @@ const SearchBar = () => {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  logo: {
+    width: 120,
+    height: 30
+  }
+})
 
 export default AppNavigation
